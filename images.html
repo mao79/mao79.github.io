@@ -5,6 +5,12 @@
     <meta charset="utf-8">
     <title>Documentオブジェクトテスト用コード</title>
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('isbn').addEventListener('change', function () {
+                location.href = this.value;
+            }, false);
+        }, false);
+
         window.addEventListener("load", function () {
 
             // 画像インデックス
@@ -41,6 +47,17 @@
 </head>
 
 <body>
+    <form name="salmon.html" action="salmon.html">
+        <label for="isbn">寿司ネタ</label>
+        <select name="isbn" id="isbn">
+            <option value="">寿司を選択</option>
+            <option value="maguro.html">マグロ</option>
+            <option value="tamago.html">たまご</option>
+            <option value="salmon.html">サーモン</option>
+            <option value="git.html">オクトキャット</option>
+            <option value="images.html">お気に入り画像集</option>
+        </select>
+    </form>
     <button>画像を変更</button>
     <p>
         <img id="image" src="kannta1.jpg" alt="かんた" />
