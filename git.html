@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+</head>
+<body>
+     <center>
+        <label for="isbn">寿司ネタ</label>
+        <select name="isbn" id="isbn">
+            <option value="">寿司を選択</option>
+            <option value="maguro.html">マグロ</option>
+            <option value="tamago.html">たまご</option>
+            <option value="salmon.html">サーモン</option>
+        </select>
+     </form>
+     <img src="オクトキャット.jpg" alt="オクトキャット">
+     <script>
+        document.addEventListener('DOMContentLoaded',function(){
+                   document.getElementById('drop').addEventListener('change',function(){
+                       location.href = this.value;
+                   });
+               });
+     </script>
+     <h1>githubの使い方</h1>
+     <p>まずは、GitHubのトップページへアクセス
+         Gitを利用した、リモートリポジトリ（共有リポジトリ）を提供しているwebサービス。
+     ご利用には登録が必要。無料プランの場合、原則全て公開（パブリック）。非公開（プライベートリポジトリ）にするのは有料（現在は$7/月）。
+     GitHubのキャラクターは「Octocat」。</p>
+     <h1>githubの作り方</h1>
+     <p>｢Pick a username｣に希望するIDを英数字で入力します。
+        ※ここで入力したusernameが公開ページのURLとなる｢http://github.com/○○○｣の部分として使用されます。
+        ｢Your email｣｢Create a password｣を入力し、｢Sign up for GitHub｣をクリック。
+        入力項目に問題がなければプラン選択画面に遷移。
+        とりあえずアカウントを作成するだけであれば、｢Unlimited public repositories for free｣を選択し、
+        ｢Continue｣をクリック。
+        (有料プランへはあとからでも変更可能)
+        Welcomeページに遷移。
+        プログラミング経験や、GitHubをどのように使う予定なのか、などなどのアンケートがあるので
+        適当に選択し、｢Continue｣をクリック。(面倒くさければ、画面下の skip this stepをクリック)
+        Git、GitHubについて学びますか？と聞かれるので、｢Start a project｣をクリック。
+        登録したメアドを確認してと言われるので、素直に確認。
+        ｢Verify email address｣をクリック
+        するともう一度同じページが表示される(はず)ので、今度は右上のアイコンをクリック - Your Profileを選択
+    ログイン時に指定したusernameのURLでアカウントが作成されました。
+</p>
+<h1>githubの更新の仕方</h1>
+<p>プルリクエストとは、「あなたのリポジトリのソースを更新したから、取り込んでください」と GitHub 上で連絡する手段です。 プルリクエストを送信しなくても、こちらの更新を相手が取り込むことはできます。
+    プルリクエストを送信するには、GitHub 上のリポジトリページへアクセスして、「プルリクエスト」ボタンをクリックします。 どのような変更を行ったのかをメッセージ欄に入力し、送信対象をチェックして「Send」ボタンを押すと、プルリクエストが送信されます。</p>
+    </center>
+    </body>
+    </html>
