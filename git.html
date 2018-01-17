@@ -8,18 +8,24 @@
 </head>
 <body>
      <center>
+         <form name="salmon.html"action="salmon.html">
         <label for="isbn">寿司ネタ</label>
         <select name="isbn" id="isbn">
             <option value="">寿司を選択</option>
             <option value="maguro.html">マグロ</option>
             <option value="tamago.html">たまご</option>
             <option value="salmon.html">サーモン</option>
+            <option value="git.html">オクトキャット</option>
+            <option value="images.html">お気に入り画像集</option>
+            <option value="brauza.html">ブラウザ判定</option>
+            <option value="setumei.html">メソッドの使い方</option>
+            <option value="timer.html">タイマー</option>
         </select>
      </form>
      <img src="オクトキャット.jpg" alt="オクトキャット">
      <script>
         document.addEventListener('DOMContentLoaded',function(){
-                   document.getElementById('drop').addEventListener('change',function(){
+                   document.getElementById('isbn').addEventListener('change',function(){
                        location.href = this.value;
                    });
                });

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id ='p'>正規表現の勉強</p>
+</body>
+<script>
+var users = 'user-g,user-a,user-k,user-d,user-z,user-m';
+
+//a〜cの値を持つユーザーIDを抽出する
+var pattern = new RegExp( 'user-[a-c]' );
+var result = users.match( pattern );
+
+console.log( result );
+</script>
+</html>

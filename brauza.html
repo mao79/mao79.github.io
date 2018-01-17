@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ブラウザ判定</title>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+                   document.getElementById('drop').addEventListener('change',function(){
+                       location.href = this.value;
+                   });
+               });
+
+        var nvName = navigator.appName;
+        var nvVersion = navigator.appVersion;
+
+        //Internet Explorer
+        if (nvName.indexOf("Internet Explorer") > -1) {
+            document.write("Internet Explorerです。");
+        }
+        else {
+        //Opera
+        if (nvName.indexOf("Opera") > -1) {
+            document.write("Operaです。");
+        }
+        else {
+        //Safari
+        if (nvVersion.indexOf("Safari") > -1) {
+        //Safari.Chrome
+        if (nvVersion.indexOf("Chrome") > -1) {
+             document.write("Google Chromeです。");
+        }
+        else {
+            document.write("Safariです。");
+            }
+        }
+        else {
+        //FireFox.etc
+        if (nvUsAgent.indexOf("Firefox") > -1) {
+             document.write("FireFoxです。");
+        }
+        else {
+             document.write("etc...");
+                 }
+            }
+         }
+    }
+     </script>
+      <p id="appVersion"></p>
+      
+      <script>
+        document.getElementById("appVersion").innerHTML = navigator.appVersion;
+    </script>
+
+
+
+</body>
+</html>
+
+<body>
+    <form name="salmon.html" action="salmon.html">
+        <select name="drop" id="drop">
+            <option value="">寿司を選択</option>
+            <option value="maguro.html">マグロ</option>
+            <option value="tamago.html">たまご</option>
+            <option value="salmon.html">サーモン</option>
+            <option value="git.html">オクトキャット</option>
+            <option value="images.html">お気に入り画像集</option>
+            <option value="brauza.html">ブラウザ判定</option>
+            <option value="setumei.html">メソッドの使い方</option>
+            <option value="timer.html">タイマー</option>
+        </select>
+    </form>
+
+    
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>time</title>
+  <style>
+    header {
+      height: 100px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 70px;
+      padding-top: 20px;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      min-width: 1024px;
+    }
+
+    #menu {
+      text-align: center;
+      height: 30px;
+      padding-top: 10px;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+        <center>
+  <header id="no4">タイマー</header>
+  <form name="salmon.html" action="salmon.html">
+    <select name="drop" id="drop">
+        <option value="">寿司を選択</option>
+        <option value="maguro.html">マグロ</option>
+        <option value="tamago.html">たまご</option>
+        <option value="salmon.html">サーモン</option>
+        <option value="git.html">オクトキャット</option>
+        <option value="images.html">お気に入り画像集</option>
+        <option value="brauza.html">ブラウザ判定</option>
+        <option value="setumei.html">メソッドの使い方</option>
+        <option value="timer.html">タイマー</option>
+    </select>
+</form>
+    <br>
+    <form name="timer">
+      <input type="text" size="5">分
+      <input type="text" size="5">秒
+      <input type="button" value="スタート" onclick="countStart()">
+    </form>
+  </center>
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('drop').addEventListener('change', function () {
+                location.href = this.value;
+            }, false);
+        }, false);
+
+    var timerdesu = "";
+
+    function countStart() {
+      document.timer.elements[2].disabled = true;
+      timerdesu = setInterval("countDown()", 1000);
+    }
+
+    function countDown() {
+      var min = document.timer.elements[0].value;
+      var sec = document.timer.elements[1].value;
+
+      if ((min == "") && (sec == ""))  
+      {
+        window.alert("入力されてないです");
+        reSet();
+      }
+      else {
+        if (min == "") min = 0;
+        min = parseInt(min);
+
+        if (sec == "") sec = 0;
+        sec = parseInt(sec);
+
+        tmWrite(min * 60 + sec - 1);
+      }
+    }
+
+    function tmWrite(int) {
+      int = parseInt(int);
+
+      if (int <= 0) {
+        reSet();
+        window.alert("時間です");
+      }
+      else {
+
+        document.timer.elements[0].value = Math.floor(int / 60);
+        document.timer.elements[1].value = int % 60;
+      }
+    }
+
+    function reSet() {
+      document.timer.elements[0].value = "0";
+      document.timer.elements[1].value = "0";
+      document.timer.elements[2].disabled = false;
+      clearInterval(timerdesu);
+    }
+  </script>
+</body>
+
+</html>
