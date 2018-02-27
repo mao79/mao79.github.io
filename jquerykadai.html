@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .toTop {
+            margin-top: 400px;
+            display: inline-block;
+            background: #0bd;
+            padding: 15px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        body {
+            font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, "メイリオ", Helvetica, Sans-Serif;
+        }
+
+        .open {
+            background: #fa2;
+            color: #fff;
+            cursor: pointer;
+            width: 50px;
+            padding: 10px;
+        }
+
+        #slideBox {
+            padding: 10px;
+            border: 1px #ccc solid;
+            display: none;
+        }
+        table { background: #666; }
+tr { background: #fff; }
+td { padding: 5px; }
+.odd { background: #ddd; }
+    </style>
+</head>
+
+<body>
+    <p>
+        <img src="赤ちゃん.png" </p>
+        <p class="toTop">
+            <img src="おじいちゃん.png" </p>
+            <p>若返り</p>
+
+            <p class="open">ボタン</p>
+            <div id="slideBox">
+                こんにちは！
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+            </script>
+            <table>
+                    <tr>
+                      <td>い</td>
+                      <td>ろ</td>
+                    </tr>
+                    <tr>
+                      <td>が</td>
+                      <td>か</td>
+                    </tr><tr>
+                      <td>わ</td>
+                      <td>り</td>
+                    </tr>
+                    <tr>
+                      <td>ま</td>
+                      <td>す</td>
+                    </tr>
+                  </table>
+
+            <script>
+                $(function () {
+                    $('.toTop').click(function () {
+                        $('body,html').animate({
+                            scrollTop: 0
+                        }, 800);
+                        return false;
+                    });
+                });
+                $(function () {
+                    $(".open").click(function () {
+                        $("#slideBox").slideToggle("slow");
+                    });
+                });
+                $(function(){
+    $("tr:even").addClass("odd");
+});
+            </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Sample3</title>
+<link rel "stylesheet" href="lunch.css">
+<script type="text/javascript">
+    function Sample3(){
+        if(document.cookie == ""){
+        var aa=""
+        var bb=""
+        var cc=""
+        var dd=""
+        for(var i=0;i<sample3_form.radio.length;i++){
+            if(sample3_form.radio[i].checked == true){
+                var hoge = sample3_form.radio[i].value;
+            }
+        }
+        if(sample3_form.check1.checked == true){var aa = "大盛り"
+        }
+        if(sample3_form.check2.checked == true){var bb = "半チャーハン"
+        }
+            if(sample3_form.check3.checked == true){var cc = "餃子"
+            }
+            if(sample3_form.check3.checked == true){var dd = "チャーシュー飯"
+            }
+            alert("ご注文は？"+hoge+aa+bb+cc+dd);
+            document.cookie = hoge + aa + bb + cc + dd + ";max-age=180;path=/";
+            mome = setTimeout("count()",120000);
+    }else{
+        alert("お客様は注文済みです。" + "\n" + document.cookie + "\n" + "しばらくお待ちください。")
+    }
+    }
+    function count(){
+        alert("へい、お待ちどうさま！");
+    }
+</script>
+</head>
+<body>
+        <table border="2">
+    <tr><form name="sample3_form" action="sample.html">
+        <th><input type="radio" name="radio" value="蒙古タンメン"/>蒙古タンメン<br>
+        <input type="radio" name="radio" value="一楽ラーメン"/>一楽ラーメン<br>
+        <input type="radio" name="radio" value="節骨ラーメン"/>節骨ラーメン</th><br>
+        <th><input type="checkbox" name="check1"/>大盛り<br>
+        <input type="checkbox" name="check2"/>半チャーハン<br>
+        <input type="checkbox" name="check3"/>餃子<br>
+        <input type="checkbox" name="check4"/>チャーシュー飯</th></tr></table><br>
+        <input type="button" value="注文する" onclick="Sample3()">
+    </form>
+</body>
+</html>
