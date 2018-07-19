@@ -9,6 +9,7 @@ height: 77px;
 background: #fff;
 border-top: 4px solid #0054a7;
 position: fixed;
+z-index:10;
 }
 
 .inner{
@@ -36,6 +37,7 @@ main h2 img{
     height: 407px;
     text-align: center;
     padding-top: 60px;
+    z-index: 0;
 }
 
 .taiken{
@@ -139,21 +141,3 @@ footer{
   }
 
 
-  div#header-fixed
-{
-    position: fixed;            /* ヘッダーの固定 */
-    top: 0px;                   /* 位置(上0px) */
-    left: 0px;                  /* 位置(右0px) */
-    width: 100%;                /* 横幅100%　*/
-    height: 140px;              /* 縦幅140px */
-}
-
-
-ul#nav
-{
-    position: fixed;            /* ヘッダーの固定 */
-    top: 0px;                   /* 位置(上0px) */
-    left: -45px;                  /* 位置(右0px) */
-    width: 100%;                /* 横幅100%　*/
-    height: 140px;              /* 縦幅140px */
-}
