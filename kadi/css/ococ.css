@@ -1,0 +1,159 @@
+@charset "utf-8";
+body{
+    margin: 0;
+    padding: 0; 
+}
+header{
+width: 100%;
+height: 77px;
+background: #fff;
+border-top: 4px solid #0054a7;
+position: fixed;
+}
+
+.inner{
+    max-width: 20px;
+    margin: left;
+    padding-top:22px;
+    text-align: center;
+}
+
+main{
+    max-width: 980px;
+    margin: auto;
+}
+
+main h2{
+    text-align: center;
+}
+
+main h2 img{
+    max-width: 100%;
+}
+
+.movie{
+    widows: 100%;
+    height: 407px;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.taiken{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.taiken2{
+    width: 300px;
+    height: 400px;
+}
+
+.tokuten{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tokuten2{
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    border-right: 3px dotted #0054a7;
+}
+
+.tokuten2:last-child{
+    border-right: 0px;
+}
+
+.tokuten2 p{
+    text-align: left;
+}
+
+.sche{
+    max-width: 980px;
+    margin: auto;
+}
+
+.sche2 h3{
+    margin-top: -75px;
+    margin-left: 100px;
+}
+
+.sche2 p{
+    margin-left: 100px;
+    margin-top: -10px;
+}
+
+footer{
+    widows: 100%;
+    height: 120px;
+    background: #999;
+    
+}
+
+.qa2 h1{
+    color: blue;
+}
+
+.qa2 h2{
+    margin-top: -60px;
+    text-align: center;
+}
+
+
+.qa2 h3{
+    color: red;
+}
+
+.qa2 p{
+    margin-top: -45px;
+    text-align: center;
+}
+
+.kyan{
+    font-size: 150;
+    
+}
+
+#nav {
+    list-style: none;
+    overflow: hidden;
+  }
+  
+  #nav li {
+    width: 140px;
+    text-align: center;
+    float: right;
+  }
+  
+  #nav li a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+  }
+
+
+  #a{
+      float: left;
+  }
+
+
+  div#header-fixed
+{
+    position: fixed;            /* ヘッダーの固定 */
+    top: 0px;                   /* 位置(上0px) */
+    left: 0px;                  /* 位置(右0px) */
+    width: 100%;                /* 横幅100%　*/
+    height: 140px;              /* 縦幅140px */
+}
+
+
+ul#nav
+{
+    position: fixed;            /* ヘッダーの固定 */
+    top: 0px;                   /* 位置(上0px) */
+    left: -45px;                  /* 位置(右0px) */
+    width: 100%;                /* 横幅100%　*/
+    height: 140px;              /* 縦幅140px */
+}
